@@ -60,8 +60,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+        sans: ['Lato', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

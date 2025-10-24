@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoDorado from "@/assets/logo-dorado.png";
+import logoNegro from "@/assets/logo-negro.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,11 +31,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-serif font-bold text-primary">B&V</span>
-            <span className="text-sm font-sans text-muted-foreground hidden sm:block">
-              Group
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logoDorado} 
+              alt="Biagi & Varnoux Group" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
