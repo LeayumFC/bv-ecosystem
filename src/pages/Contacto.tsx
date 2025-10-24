@@ -154,10 +154,10 @@ const Contacto = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email</h3>
                       <a 
-                        href="mailto:info@byvgroup.com"
+                        href="info@biagivarnoux.com"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        info@byvgroup.com
+                        info@biagivarnoux.com
                       </a>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ const Contacto = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Teléfono</h3>
-                      <p className="text-muted-foreground">+591 XXX XXXX</p>
+                      <p className="text-muted-foreground">+591 69425424</p>
                     </div>
                   </div>
 
@@ -179,7 +179,7 @@ const Contacto = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Dirección</h3>
                       <p className="text-muted-foreground">
-                        Bolivia
+                        La Paz - Bolivia
                       </p>
                     </div>
                   </div>
