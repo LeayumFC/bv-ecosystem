@@ -105,25 +105,7 @@ const Commerce = () => {
           </div>
         </section>
 
-        {/* Brands Section */}
-        <section className="py-20 bg-secondary">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Award className="h-12 w-12 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl font-serif font-bold text-foreground mb-6">
-              Marcas que Representamos
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Somos partners oficiales de marcas líderes en tecnología y equipamiento empresarial.
-            </p>
-            <div className="flex flex-wrap justify-center gap-8 text-2xl font-semibold text-primary">
-              <span>DELL</span>
-              <span className="text-muted-foreground">•</span>
-              <span>ASUS</span>
-              <span className="text-muted-foreground">•</span>
-              <span>HP</span>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Focus Section */}
         <section className="py-20">

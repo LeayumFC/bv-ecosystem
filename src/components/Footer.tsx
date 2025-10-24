@@ -74,12 +74,12 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <Mail className="h-5 w-5 text-primary mt-0.5" />
                 <a href="mailto:info@byvgroup.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  info@byvgroup.com
+                  info@biagivarnoux.com
                 </a>
               </li>
               <li className="flex items-start space-x-2">
                 <Phone className="h-5 w-5 text-primary mt-0.5" />
-                <span className="text-sm text-muted-foreground">+591 XXX XXXX</span>
+                <span className="text-sm text-muted-foreground">(+591) 69525424</span>
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
