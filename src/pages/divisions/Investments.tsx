@@ -245,7 +245,7 @@ const Investments = () => {
               <div className="p-6 bg-secondary rounded-lg border-l-4 border-highlight">
                 <h4 className="font-semibold text-foreground mb-2">Ejemplo 3: Joint Venture</h4>
                 <p className="text-sm text-muted-foreground">
-                  B&V Advisory asesora a una marca (ej. DELL) sobre cómo entrar al sector educativo. 
+                  B&V Advisory asesora a una marca sobre cómo entrar al sector educativo. 
                   La marca quiere ejecutar pero no tiene recursos locales. 
                   <strong className="text-highlight"> B&V Investments se asocia 50/50 para crear 
                   una distribuidora especializada en instituciones educativas</strong>.

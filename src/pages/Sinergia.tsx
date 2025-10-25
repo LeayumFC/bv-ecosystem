@@ -136,7 +136,7 @@ const Sinergia = () => {
                       </h4>
                       <p className="text-sm text-muted-foreground">
                         B&V Advisory ofrece el plan estratégico completo a un cliente 
-                        (ej. DELL) para que ellos desarrollen el negocio. Cobramos 
+                        para que ellos desarrollen el negocio. Cobramos 
                         por la consultoría.
                       </p>
                     </div>
