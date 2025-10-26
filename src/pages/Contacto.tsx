@@ -7,9 +7,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { contactFormSchema } from "@/schemas/contactFormSchema";
 
 const Contacto = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,13 +21,60 @@ const Contacto = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensaje Enviado",
-      description: "Nos pondremos en contacto con usted pronto.",
-    });
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    setIsSubmitting(true);
+    
+    try {
+      // Validate form data
+      const validatedData = contactFormSchema.parse(formData);
+      
+      // Prepare data for insertion (remove empty phone if not provided)
+      const dataToInsert = {
+        name: validatedData.name,
+        email: validatedData.email,
+        phone: validatedData.phone || null,
+        subject: validatedData.subject,
+        message: validatedData.message
+      };
+      
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([dataToInsert]);
+      
+      if (error) throw error;
+      
+      // Success
+      toast({
+        title: "¡Mensaje Enviado!",
+        description: "Gracias por contactarnos. Nos pondremos en contacto con usted pronto.",
+      });
+      
+      // Clear form
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      
+    } catch (error: any) {
+      // Handle validation or database errors
+      if (error.errors) {
+        // Zod validation errors
+        const firstError = error.errors[0];
+        toast({
+          title: "Error de Validación",
+          description: firstError.message,
+          variant: "destructive"
+        });
+      } else {
+        // Database or network errors
+        toast({
+          title: "Error",
+          description: "Hubo un problema al enviar el mensaje. Por favor intente nuevamente.",
+          variant: "destructive"
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -134,8 +184,9 @@ const Contacto = () => {
                   <Button 
                     type="submit" 
                     className="w-full bg-primary hover:bg-accent text-primary-foreground"
+                    disabled={isSubmitting}
                   >
-                    Enviar Mensaje
+                    {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                   </Button>
                 </form>
               </div>
