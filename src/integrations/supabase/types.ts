@@ -50,6 +50,54 @@ export type Database = {
         }
         Relationships: []
       }
+      product_inquiries: {
+        Row: {
+          additional_notes: string | null
+          admin_notes: string | null
+          company_name: string
+          created_at: string
+          email: string
+          id: string
+          inquiry_type: Database["public"]["Enums"]["inquiry_type"]
+          phone: string | null
+          product_category: string
+          product_description: string
+          quantity: string | null
+          status: string
+          urgency: Database["public"]["Enums"]["inquiry_urgency"]
+        }
+        Insert: {
+          additional_notes?: string | null
+          admin_notes?: string | null
+          company_name: string
+          created_at?: string
+          email: string
+          id?: string
+          inquiry_type: Database["public"]["Enums"]["inquiry_type"]
+          phone?: string | null
+          product_category: string
+          product_description: string
+          quantity?: string | null
+          status?: string
+          urgency: Database["public"]["Enums"]["inquiry_urgency"]
+        }
+        Update: {
+          additional_notes?: string | null
+          admin_notes?: string | null
+          company_name?: string
+          created_at?: string
+          email?: string
+          id?: string
+          inquiry_type?: Database["public"]["Enums"]["inquiry_type"]
+          phone?: string | null
+          product_category?: string
+          product_description?: string
+          quantity?: string | null
+          status?: string
+          urgency?: Database["public"]["Enums"]["inquiry_urgency"]
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -58,7 +106,8 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      inquiry_type: "availability" | "quotation" | "general"
+      inquiry_urgency: "high" | "medium" | "low"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -185,6 +234,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      inquiry_type: ["availability", "quotation", "general"],
+      inquiry_urgency: ["high", "medium", "low"],
+    },
   },
 } as const

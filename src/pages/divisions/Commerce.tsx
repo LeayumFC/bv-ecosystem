@@ -2,7 +2,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ShoppingBag, Globe, TrendingUp, Award } from "lucide-react";
+import { ShoppingBag, Globe, TrendingUp, Award, Package } from "lucide-react";
+import ProductInquiryForm from "@/components/ProductInquiryForm";
 
 const Commerce = () => {
   return (
@@ -123,6 +124,26 @@ const Commerce = () => {
                 del mercado boliviano y regional.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Product Inquiry Section */}
+        <section className="py-20 bg-secondary">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center mb-6">
+                <Package className="h-12 w-12 text-primary" />
+              </div>
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
+                ¿Necesita Productos Específicos?
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Consulte disponibilidad, solicite cotizaciones o pregunte sobre 
+                productos que necesita. Respondemos en 24-48 horas.
+              </p>
+            </div>
+            
+            <ProductInquiryForm />
           </div>
         </section>
 
