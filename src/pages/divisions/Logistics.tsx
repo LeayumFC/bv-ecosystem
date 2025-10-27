@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Truck, Plane, Package, MapPin } from "lucide-react";
@@ -7,6 +8,11 @@ import { Truck, Plane, Package, MapPin } from "lucide-react";
 const Logistics = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="B&V Logistics"
+        description="B&V Logistics: Servicios integrales de cadena de suministro y logística internacional. Freight forwarding, gestión aduanera, almacenamiento y distribución de última milla en Bolivia."
+        keywords="logística internacional, freight forwarding, transporte internacional, gestión aduanera, almacenamiento Bolivia, última milla, cadena de suministro, despacho aduanero"
+      />
       <Navigation />
       
       <div className="pt-20">

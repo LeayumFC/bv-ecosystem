@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import DivisionCard from "@/components/DivisionCard";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { ShoppingBag, Truck, Lightbulb, TrendingUp, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -40,6 +41,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Inicio"
+        description="Biagi & Varnoux Group: Holding empresarial líder que integra comercio internacional, logística empresarial, consultoría estratégica e inversiones para crear soluciones de negocio integrales y sostenibles."
+        keywords="comercio internacional, logística empresarial, consultoría estratégica, gestión de inversiones, importación exportación, soluciones integrales, holding empresarial"
+      />
       <Navigation />
       <Hero />
 

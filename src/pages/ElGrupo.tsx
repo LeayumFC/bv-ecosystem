@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Target, Eye, Award } from "lucide-react";
 
 const ElGrupo = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="El Grupo"
+        description="Conozca Biagi & Varnoux Group: nuestra misión, visión, valores fundamentales y modelo de gestión estratégica como holding empresarial líder en soluciones integradas de negocio."
+        keywords="holding empresarial, gestión estratégica, valores corporativos, misión visión valores, asignación de capital, gestión de riesgo, sinergia operativa"
+      />
       <Navigation />
       
       <div className="pt-20">

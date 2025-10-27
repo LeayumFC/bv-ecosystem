@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Search, BarChart3, Rocket } from "lucide-react";
 
 const Sinergia = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Nuestra Sinergia"
+        description="Descubra cómo funciona el ecosistema integrado de Biagi & Varnoux Group: detección de oportunidades, análisis estratégico y ejecución de negocios rentables a través de nuestras divisiones especializadas."
+        keywords="sinergia empresarial, modelo de negocio integrado, detección de oportunidades, análisis de mercado, ejecución estratégica, creación de valor, ecosistema empresarial"
+      />
       <Navigation />
       
       <div className="pt-20">

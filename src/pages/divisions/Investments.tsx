@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { TrendingUp, Rocket, Handshake, Building2 } from "lucide-react";
@@ -7,6 +8,11 @@ import { TrendingUp, Rocket, Handshake, Building2 } from "lucide-react";
 const Investments = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="B&V Investments"
+        description="B&V Investments: Creación y adquisición estratégica de empresas. Joint ventures, nuevos negocios y oportunidades de inversión multisectoriales en Bolivia y la región."
+        keywords="inversiones empresariales, creación de empresas, joint ventures, adquisiciones estratégicas, oportunidades de inversión Bolivia, venture capital, nuevos negocios"
+      />
       <Navigation />
       
       <div className="pt-20">

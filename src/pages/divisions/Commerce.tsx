@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ShoppingBag, Globe, TrendingUp, Award, Package } from "lucide-react";
@@ -8,6 +9,11 @@ import ProductInquiryForm from "@/components/ProductInquiryForm";
 const Commerce = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="B&V Commerce"
+        description="B&V Commerce: Su socio estratégico en comercio internacional. Distribución y representación de marcas internacionales, importación y exportación, gestión integral de marketing y ventas."
+        keywords="comercio internacional, distribución marcas, importación Bolivia, exportación, representación de marcas, trading internacional, socio comercial"
+      />
       <Navigation />
       
       <div className="pt-20">

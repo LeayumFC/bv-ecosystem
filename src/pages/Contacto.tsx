@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -79,6 +80,11 @@ const Contacto = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contacto"
+        description="Contáctese con Biagi & Varnoux Group. Ya sea para servicios comerciales, logística, consultoría estratégica o inversiones, estamos listos para ayudarle. Envíe un mensaje o llámenos."
+        keywords="contacto, consultas comerciales, solicitar información, consultoría, servicios logísticos, oportunidades de inversión, La Paz Bolivia"
+      />
       <Navigation />
       
       <div className="pt-20">

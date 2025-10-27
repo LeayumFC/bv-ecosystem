@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Lightbulb, Target, Workflow, Zap } from "lucide-react";
@@ -7,6 +8,11 @@ import { Lightbulb, Target, Workflow, Zap } from "lucide-react";
 const Advisory = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="B&V Advisory"
+        description="B&V Advisory: Consultoría estratégica de alto nivel. Entrada a mercados, integración empresarial, optimización de operaciones. Transformamos insights en estrategias rentables."
+        keywords="consultoría estratégica, asesoría empresarial, entrada a mercados, fusiones y adquisiciones, optimización operacional, estrategia de negocios, análisis de mercado"
+      />
       <Navigation />
       
       <div className="pt-20">

@@ -59,13 +59,13 @@ const Navigation = () => {
               onMouseEnter={() => setIsDivisionsOpen(true)}
               onMouseLeave={() => setIsDivisionsOpen(false)}
             >
-              <button className="flex items-center space-x-1 text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <button className="flex items-center space-x-1 text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
                 <span>Nuestras Divisiones</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
 
               {isDivisionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-md shadow-lg py-2">
+                <div className="absolute top-full left-0 mt-0 w-56 bg-background border border-border rounded-md shadow-lg py-2 z-50">
                   {divisionLinks.map((link) => (
                     <Link
                       key={link.path}
